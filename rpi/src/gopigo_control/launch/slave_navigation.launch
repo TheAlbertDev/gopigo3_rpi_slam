@@ -1,0 +1,9 @@
+<launch>
+  <arg name="lidar_model" />
+  <include file="$(find gopigo3_node)/launch/gopigo3.launch"/>
+  <include if="$(eval lidar_model=='yd')" file="$(find ydlidar)/launch/lidar.launch"/>
+  <include if="$(eval lidar_model=='rp')" file="$(find rplidar_ros)/launch/rplidar.launch"/>
+
+
+
+</launch>

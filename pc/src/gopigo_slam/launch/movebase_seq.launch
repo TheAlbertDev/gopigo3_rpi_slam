@@ -1,0 +1,17 @@
+<launch>
+
+<!-- MoveBaseSeq node launch and Points Sequence ROS Parameters Loading -->
+
+    <!--Run move_base_seqs node-->>
+
+    <node pkg="gopigo_slam" type="move_base_seq.py" name="move_base_seq" output="screen">
+    
+    <!-- Load Sequence of Points (Cartesian Coordinates wrt "map" RF, in meters) -->
+        <!--<rosparam param="p_seq">[4,-0.1, 1.8, 3, -2.2, -1.8, 3.6,-2.4,-1.7, 4.6, -1.4,-0.2, 4.6,-1.4,-0.2]</rosparam>-->>
+        <rosparam param="p_seq">[4,-0.1, 1.8, 3,-2.2,-1.8, 3, -2.2, -1.8, 3.6,-2.4,-1.7, 4.6, -1.4,-0.2, 4.6,-1.4,-0.2]</rosparam>
+    <!-- Load Sequence of Desired Yaw Angles (no rotations around x and y axes) in degrees-->
+        <rosparam param="yea_seq">[270,270,270,270,0,0]</rosparam>
+
+    </node>
+
+</launch>
